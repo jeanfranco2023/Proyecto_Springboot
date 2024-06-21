@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+body{
+    text-align: center;
+    font-family: sans-serif;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar{
+    justify-content: space-between;
+    color: aquamarine;
+}
+.cont{
+    margin-right: 28px;
+}
+.num{
+    margin-left: 20px;
+}
+.search{
+    height: 30px;
+    width: 50px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    margin-left: 10px;
+}
+.bell{
+    height: 30px;
+    width: 50px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    margin-left: 10px;
+}
+.user{
+    height: 30px;
+    width: 50px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+.head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(29, 29, 29);
+    height: 100px;
+}
+.titulo{
+    align-items: center;
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: -20px;
+    font-family:'Gill Sans MT'
+}
+.informacion{
+    height: 80px;
+    width: 200px;
+    background-color: rgb(5, 5, 5);
+    border-radius: 20px;
+    color: aliceblue;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+} 
+.subtitulo{
+    font-size: 25px;
+    display: flex;
+    margin-left: 200px;
+    margin-bottom: 32px;
+}
+.linea1{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin-bottom: 32px;
+}
+.linea2{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin-bottom: 32px;
+}
+.linea3{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin-bottom: 32px;
+}
+.linea4{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin-bottom: 32px;
+}
+.final{
+    background-color: aquamarine;
+    display: flex;
+
+}
+.links{
+    display: flex;
+    justify-content: center;
+    margin-left: 140px;
+}
+.final h4 {
+    width: 100%;
+  }
+.logos i {
+    display: inline-block;
+    justify-content: center;
+    margin-right: 20px;
+    width: 20px;
+    height: 20px;
+  }
+  
+.acomodar{
+    display: flex;
+    justify-content: center;
+    margin-left: 400px;
+}
+.SN1{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.SN2{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.SN3{
+    margin-left: 20px;
+    margin-right: 20px;
+}
