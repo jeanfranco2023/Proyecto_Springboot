@@ -62,10 +62,17 @@ public class MainController {
     }
     
     @Controller
-    public class PrincipalController {
-        @GetMapping("/principal")
+    public class PrincipalControllerClientes {
+        @GetMapping("/principalcliente")
         public String mostrarPrincipal() {
-            return "principal";
+            return "PrincipalClientes";
+        }
+    }
+    @Controller
+    public class PrincipalControllerUsuario {
+        @GetMapping("/principalUsuarios")
+        public String mostrarPrincipal() {
+            return "PrincipalUsuario";
         }
     }
     
