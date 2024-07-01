@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="estilo_p-cliente.css">
-    <title>Turismo Express</title>
+    <link rel="stylesheet" href="estilo_malecon-miraflores.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Malecón de Miraflores</title>
+
 </head>
 <body>
-
     <header class="head">
         <div class="logo">
-            <img src="logo.jpg" width="400px">
+            <a href="/principalcliente"><img src="images/logo.jpg" width="400px"></a>
         </div>
         <nav class="navbar">
             <a class="Contac">Contacto</a>
@@ -40,67 +42,42 @@
             </div>
         </nav>
     </header>
-    
-    <section class="contenido">
-        <h1 class="titulo">Explora Lima: El corazon vibrante de Peru</h1>
-        <img src="collage.png" width="1000px" height="600px">
-        <div>
-            <button class="informacion">Mas informacion</button>
-            <h2 class="subtitulo">Lugares turisticos</h2>
+
+    <main>
+        <div class="title">
+            <h1>Malecón de Miraflores</h1>
         </div>
-    </section>
-    <section class="lugares">
-        <div class="linea1">
-            <div>
-                <button class="parque">
-                    <a href="/parque-olivo"><img src="parque_olivar.jpg" width="400px" height="400px"></a>
-                </button>
-                <h2 class="olivar">Parque el olivar</h2>
-                <i class="fa-solid fa-dollar-sign">15</i>
+        <div class="main-content">
+            <div class="main-image">
+                <img src="images/Malecón de Miraflores.jpeg" alt="Parque el Olivar">
             </div>
-            <div>
-                <a href="/museo-larco"><img src="museo_larco.jpg" width="400px" height="400px"></a>
-                <h2 class="larco">Museo Larco</h2>
-                <i class="fa-solid fa-dollar-sign">20</i>
+            <div class="main-text">
+                <p>Estos hermosos malecones con vistas a Costa Verde. Son un perfecto lugar para practicar parapente. Esta conformado por tres malecones: malecón de la Marina, malecón Cisneros y malecón de la Reserva. Aparte de las hermosas vistas y los extravagantes deportes, muy cerca se tiene el centro comercial Larcomar.</p>
+                <p>Como llegar a Malecón de Miraflores: Lo más común es usando el Sistema Integrado de Transporte que transita la avenida Larco hasta la parada frente a Larcomar. </p>
+                <button class="add-to-cart">Add to cart</button>
+                <button class="More-info">Más información</button>
             </div>
         </div>
-        <div class="linea2">
-            <div>
-                <a href="/punta-negra"><img src="punta_negra.jpg" width="400px" height="400px"></a>
-                <h2 class="punta">Punta Negra</h2>
-                <i class="fa-solid fa-dollar-sign">25</i>
-            </div>
-            <div>
-                <a href="/nor-yauyos-cochas"><img src="nor_yauyos_cochas.jpeg" width="400px" height="400px"></a>
-                <h2 class="nor">Nor Yauyos-Cochas</h2>
-                <i class="fa-solid fa-dollar-sign">30</i>
-            </div>
-        </div>
-        <div class="linea3">
-            <div>
-                <a href="/malecon-miraflores"><img src="malecon_miraflores.jpg" width="400px" height="400px"></a>
-                <h2 class="malecon">Malecon de Miraflores</h2>
-                <i class="fa-solid fa-dollar-sign">35</i>
-            </div>
-            <div>
-                <a href="/caral"><img src="caral.jpg" width="400px" height="400px"></a>
-                <h2 class="caral">Caral</h2>
-                <i class="fa-solid fa-dollar-sign">40</i>
+
+        <div class="nearby-places">
+            <h2>Lugares Cercanos</h2>
+            <div class="place-cards">
+                <div class="place-card">
+                    <img src="images/C_Parque_Chino_de_Miraflores.jpg" height="250px" width="420px" alt="Casa de la Cultura">
+                    <p>Parque Chino de Miraflores</p>
+                </div>
+                <div class="place-card">
+                    <img src="images/C_Parque_del_Amor.jpg" height="250px" width="420px" alt="Huaca Huallamarca">
+                    <p>Parque del Amor</p>
+                </div>
+                <div class="place-card">
+                    <img src="images/C_Larcomar.jpg" height="250px" width="420px" alt="Parroquia 'Virgen del Pilar'">
+                    <p>Larcomar"</p>
+                </div>
             </div>
         </div>
-        <div class="linea4">
-            <div>
-                <a href="/huaca-pucllana"><img src="huaca_pucllana.jpg" width="400px" height="400px"></a>
-                <h2 class="huaca">Huaca Pucllana</h2>
-                <i class="fa-solid fa-dollar-sign">45</i>
-            </div>
-            <div>
-                <a href="/islas-palomino"><img src="islas_palomino.jpg" width="400px" height="400px"></a>
-                <h2 class="isla">Islas Palominos</h2>
-                <i class="fa-solid fa-dollar-sign">50</i>
-            </div>
-        </div>
-    </section>
+    </main>
+
     <footer>
         <div class="footer-content">
             <div class="footer-left">

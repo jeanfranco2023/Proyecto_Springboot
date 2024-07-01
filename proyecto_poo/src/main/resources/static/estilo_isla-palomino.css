@@ -126,6 +126,7 @@ footer {
 .footer-left, .company-info, .policies, .help {
     flex: 1;
 }
+
 .user-menu {
     position: relative;
     display: inline-block;

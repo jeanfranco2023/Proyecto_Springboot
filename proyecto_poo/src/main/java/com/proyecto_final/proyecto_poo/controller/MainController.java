@@ -105,4 +105,34 @@ public class MainController {
             return "punta_negra";
         }
     }
+
+    @Controller
+    public class caral {
+        @GetMapping("/caral")
+        public String mostrarPrincipal() {
+            return "caral";
+        }
+    }
+    @Controller
+    public class huacapucllana {
+        @GetMapping("/huaca-pucllana")
+        public String mostrarPrincipal() {
+            return "huaca_pucllana";
+        }
+    }
+
+    @Controller
+    public class islapalomino {
+        @GetMapping("/islas-palomino")
+        public String mostrarPrincipal() {
+            return "islas_palomino";
+        }
+    }
+    @Controller
+    public class maleconmiraflores {
+        @GetMapping("/malecon-miraflores")
+        public String mostrarPrincipal() {
+            return "maleconmiraflores";
+        }
+    }
 }
