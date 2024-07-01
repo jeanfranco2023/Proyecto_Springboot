@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="PuntaNegra.css">
+    <link rel="stylesheet" href="estilo_punta-negra.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -11,13 +11,13 @@
 
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <span class="logo">
-            <img src="Imaganes 2parte/logo.jpg" width="300px">
-            </span>
-            <span>Contacto</span>
-            <span>601 133 900</span>
+    <header class="head">
+        <div class="logo">
+            <img src="Imaganes 2parte/logo.jpg" width="400px">
+        </div>
+        <nav class="navbar">
+            <a class="Contac">Contacto</a>
+            <a class="num">931 133 900&nbsp;</a>
             <span class="icon">
                 <i class="fa-solid fa-phone"></i>
             </span>
@@ -27,10 +27,20 @@
             <span class="icon">
                 <i class="fa-solid fa-bell"></i>
             </span>
-            <span class="icon">
-                <i class="fa-solid fa-user"></i>
-            </span>
-        </div>
+            <div>
+                <a class="usuario">&nbsp;&nbsp;¡Hola! Jean Franco&nbsp;</a>
+                </div>
+            <div class="user-menu">
+                <button class="user">
+                    <i class="fa-solid fa-user"></i>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="#">Verificar compras</a>
+                    <a href="#">Usuario</a>
+                    <a href="#">Cerrar sesión</a>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <main>
@@ -107,5 +117,26 @@
             </div>
         </div>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const userButton = document.querySelector(".user");
+            const dropdownMenu = document.querySelector(".dropdown-menu");
+
+            userButton.addEventListener("click", function (event) {
+                dropdownMenu.classList.toggle("show");
+                event.stopPropagation();
+            });
+
+            window.addEventListener("click", function () {
+                if (dropdownMenu.classList.contains('show')) {
+                    dropdownMenu.classList.remove('show');
+                }
+            });
+
+            dropdownMenu.addEventListener("click", function (event) {
+                event.stopPropagation();
+            });
+        });
+    </script>
 </body>
 </html>

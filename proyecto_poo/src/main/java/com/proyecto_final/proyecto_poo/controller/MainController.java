@@ -76,5 +76,33 @@ public class MainController {
         }
     }
     
+    @Controller
+    public class parqueolivo {
+        @GetMapping("/parque-olivo")
+        public String mostrarPrincipal() {
+            return "parqueolivargeneral";
+        }
+    }
+    @Controller
+    public class museolarco {
+        @GetMapping("/museo-larco")
+        public String mostrarPrincipal() {
+            return "museo_larco";
+        }
+    }
 
+    @Controller
+    public class noryauyos {
+        @GetMapping("/nor-yauyos-cochas")
+        public String mostrarPrincipal() {
+            return "noryauyos";
+        }
+    }
+    @Controller
+    public class puntanegra {
+        @GetMapping("/punta-negra")
+        public String mostrarPrincipal() {
+            return "punta_negra";
+        }
+    }
 }

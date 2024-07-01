@@ -11,13 +11,13 @@
 
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <span class="logo">
-            <img src="Imaganes 2parte/logo.jpg" width="300px">
-            </span>
-            <span>Contacto</span>
-            <span>601 133 900</span>
+    <header class="head">
+        <div class="logo">
+            <img src="Imaganes 2parte/logo.jpg" width="400px">
+        </div>
+        <nav class="navbar">
+            <a class="Contac">Contacto</a>
+            <a class="num">931 133 900&nbsp;</a>
             <span class="icon">
                 <i class="fa-solid fa-phone"></i>
             </span>
@@ -27,10 +27,20 @@
             <span class="icon">
                 <i class="fa-solid fa-bell"></i>
             </span>
-            <span class="icon">
-                <i class="fa-solid fa-user"></i>
-            </span>
-        </div>
+            <div>
+                <a class="usuario">&nbsp;&nbsp;¡Hola! Jean Franco&nbsp;</a>
+                </div>
+            <div class="user-menu">
+                <button class="user">
+                    <i class="fa-solid fa-user"></i>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="#">Verificar compras</a>
+                    <a href="#">Usuario</a>
+                    <a href="#">Cerrar sesión</a>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <main>
@@ -68,44 +78,65 @@
         </div>
     </main>
 
-        <footer>
-            <div class="footer-content">
-                <div class="footer-left">
-                    <h3>ENCUÉNTRANOS EN:</h3>
-                    <div class="social-icons">
-                        <span class="icon">
-                            <i class="fa-brands fa-facebook"></i>
-                        </span>
-                        <span class="icon">
-                            <i class="fa-brands fa-linkedin"></i>
-                        </span>
-                        <span class="icon">
-                            <i class="fa-brands fa-youtube"></i>
-                        </span>
-                        <span class="icon">
-                            <i class="fa-brands fa-instagram"></i>
-                        </span>
-                    </div>
-                </div>
-                <div class="company-info">
-                    <h3>Empresa</h3>
-                    <p>Quiénes Somos</p>
-                    <p>Misión</p>
-                    <p>Visión</p>
-                </div>
-                <div class="policies">
-                    <h3>Políticas</h3>
-                    <p>Privacidad</p>
-                    <p>Cookies</p>
-                    <p>Términos de Uso</p>
-                </div>
-                <div class="help">
-                    <h3>Ayuda</h3>
-                    <p>Contacto</p>
-                    <p>Cancelar la reservación</p>
-                    <p>Plazos de Reembolso</p>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <h3>ENCUÉNTRANOS EN:</h3>
+                <div class="social-icons">
+                    <span class="icon">
+                        <i class="fa-brands fa-facebook"></i>
+                    </span>
+                    <span class="icon">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </span>
+                    <span class="icon">
+                        <i class="fa-brands fa-youtube"></i>
+                    </span>
+                    <span class="icon">
+                        <i class="fa-brands fa-instagram"></i>
+                    </span>
                 </div>
             </div>
-        </footer>
+            <div class="company-info">
+                <h3>Empresa</h3>
+                <p>Quiénes Somos</p>
+                <p>Misión</p>
+                <p>Visión</p>
+            </div>
+            <div class="policies">
+                <h3>Políticas</h3>
+                <p>Privacidad</p>
+                <p>Cookies</p>
+                <p>Términos de Uso</p>
+            </div>
+            <div class="help">
+                <h3>Ayuda</h3>
+                <p>Contacto</p>
+                <p>Cancelar la reservación</p>
+                <p>Plazos de Reembolso</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const userButton = document.querySelector(".user");
+            const dropdownMenu = document.querySelector(".dropdown-menu");
+
+            userButton.addEventListener("click", function (event) {
+                dropdownMenu.classList.toggle("show");
+                event.stopPropagation();
+            });
+
+            window.addEventListener("click", function () {
+                if (dropdownMenu.classList.contains('show')) {
+                    dropdownMenu.classList.remove('show');
+                }
+            });
+
+            dropdownMenu.addEventListener("click", function (event) {
+                event.stopPropagation();
+            });
+        });
+    </script>
 </body>
 </html>
