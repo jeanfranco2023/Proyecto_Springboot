@@ -11,13 +11,13 @@ body{
 }
 .header{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 .navbar{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     color: aquamarine;
 }
 .cont{
@@ -25,15 +25,14 @@ body{
 }
 .num{
     margin-left: 20px;
-}
-.search, .bell, .user {
-    height: 30px;
-    width: 50px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 20px;
-    margin-left: 10px;
+    margin-right: 28px;
 }
 .user {
+    height: 30px;
+    width: 50px;
+    background-color: skyblue;
+    border-radius: 20px;
+    margin-left: 10px;
     margin-right: 20px;
 }
 .head {
@@ -45,6 +44,11 @@ body{
     list-style: none;
     word-spacing: 1%;
 }
+.head .icon{
+    cursor: pointer;
+    margin-right: 40px;
+}
+
 .titulo{
     align-items: center;
     font-size: 40px;

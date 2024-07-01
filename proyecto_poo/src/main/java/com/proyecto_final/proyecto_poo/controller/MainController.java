@@ -35,7 +35,7 @@ public class MainController {
             String contrasenia = usuario.getContrasenia();
 
             if(contrasenia.equals(login.getContrasenia())) {
-                return "redirect:/principal";
+                return "redirect:/principalcliente";
             }
         }
 

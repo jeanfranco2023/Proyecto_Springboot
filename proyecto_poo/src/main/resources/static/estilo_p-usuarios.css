@@ -11,13 +11,13 @@ body{
 }
 .header{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 .navbar{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     color: aquamarine;
 }
 .cont{
@@ -25,22 +25,30 @@ body{
 }
 .num{
     margin-left: 20px;
+    margin-right: 28px;
 }
-.search, .bell, .user {
+.user {
     height: 30px;
     width: 50px;
-    background-color: rgb(255, 255, 255);
+    background-color: skyblue;
     border-radius: 20px;
     margin-left: 10px;
     margin-right: 20px;
 }
-.head{
+.head {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background-color: rgb(29, 29, 29);
     height: 100px;
+    list-style: none;
+    word-spacing: 1%;
 }
+.head .icon{
+    cursor: pointer;
+    margin-right: 40px;
+}
+
 .titulo{
     align-items: center;
     font-size: 40px;
@@ -95,4 +103,29 @@ footer {
     flex: 1;
     min-width: 200px;
     margin: 10px;
+}
+.user-menu {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-menu a:hover {
+    background-color: #f1f1f1;
+}
+.show {
+    display: block;
 }
