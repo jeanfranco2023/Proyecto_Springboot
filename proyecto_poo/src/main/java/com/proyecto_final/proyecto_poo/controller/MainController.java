@@ -8,15 +8,32 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import com.proyecto_final.proyecto_poo.dto.CarritoDTO;
 import com.proyecto_final.proyecto_poo.dto.Login;
+import com.proyecto_final.proyecto_poo.entitys.Carrito;
+import com.proyecto_final.proyecto_poo.entitys.Destino;
 import com.proyecto_final.proyecto_poo.entitys.Usuario;
+import com.proyecto_final.proyecto_poo.repository.CarritoRepository;
+import com.proyecto_final.proyecto_poo.repository.DestinoRepository;
 import com.proyecto_final.proyecto_poo.repository.UsuarioRepository;
+import org.springframework.web.bind.annotation.RequestParam;
+
+
+
 
 @Controller
 public class MainController {
     
     @Autowired
     private UsuarioRepository usuarioRepository;
+
+    @Autowired
+    private CarritoRepository carritoRepository;
+
+    @Autowired
+    private DestinoRepository destinoRepository;
+
+    private Usuario usuarioIniciado;
 
     @GetMapping("/index")
     public String verVista(Model model) {
@@ -35,6 +52,7 @@ public class MainController {
             String contrasenia = usuario.getContrasenia();
 
             if(contrasenia.equals(login.getContrasenia())) {
+                usuarioIniciado = usuario;
                 return "redirect:/principalcliente";
             }
         }
@@ -53,6 +71,10 @@ public class MainController {
     @PostMapping("/guardar")
     public String registrarUsuario(@ModelAttribute("usuario") Usuario usuario) {
         try {
+            Carrito carrito = new Carrito();
+            carritoRepository.save(carrito);
+            usuario.setCarrito(carrito);
+
             usuarioRepository.save(usuario);
         } catch(Exception e) {
             return "redirect:/registrar";
@@ -60,6 +82,9 @@ public class MainController {
         
         return "redirect:/index";
     }
+
+
+
     
     @Controller
     public class PrincipalControllerClientes {
@@ -79,7 +104,20 @@ public class MainController {
     @Controller
     public class parqueolivo {
         @GetMapping("/parque-olivo")
-        public String mostrarPrincipal() {
+        public String mostrarPrincipal(Model model) {
+            model.addAttribute("nombreUsuario", usuarioIniciado.getNombre());
+            return "parqueolivargeneral";
+        }
+
+        @GetMapping("/parque_olivo")
+        public String getMethodName(@RequestParam(name = "nombreDestino") String nombreDestino, @RequestParam(name = "precio") Double precio) {
+            Destino destino = new Destino();
+            destino.setNombre(nombreDestino);
+            destino.setPrecio(precio);
+            destino.setNumeroPaquetes(1);
+            destino.setCarrito(usuarioIniciado.getCarrito());
+            destinoRepository.save(destino);
+
             return "parqueolivargeneral";
         }
     }
@@ -135,4 +173,17 @@ public class MainController {
             return "maleconmiraflores";
         }
     }
+
+
+    @GetMapping("/verCarrito")
+    public String verCarrito(Model model) {
+        Carrito carrito = usuarioIniciado.getCarrito();
+        CarritoDTO carritoDTO = new CarritoDTO(carrito.getId(), carrito.getListaDestinos(), carrito.getUsuario().getNombre());
+
+        model.addAttribute("carrito", carritoDTO);
+
+        return "carrito";
+    }
+
+    
 }

@@ -28,7 +28,7 @@
                 <i class="fa-solid fa-bell"></i>
             </span>
             <div>
-                <a class="usuario">&nbsp;&nbsp;¡Hola! Jean Franco&nbsp;</a>
+                <a class="usuario">&nbsp;&nbsp;¡Hola! <span th:text="${nombreUsuario}"></span>&nbsp;</a>
                 </div>
             <div class="user-menu">
                 <button class="user">
@@ -54,7 +54,7 @@
             <div class="main-text">
                 <p>El Parque El Olivar de San Isidro alberga una colección de olivos únicos en Perú debido a su longevidad. Actualmente, cuenta con aproximadamente 1,670 olivos y 227 árboles de diversas especies. Además, el parque ofrece centros culturales, museos, bibliotecas, un teatro y una galería de arte.</p>
                 <p>Cómo llegar al Parque El Olivar: Desde la Avenida Arequipa, dirigete hacia el este por Paillardell hasta llegar al corazón del parque.</p>
-                <button class="add-to-cart">Add to cart</button>
+                <button class="add-to-cart"><a th:href="@{'/parque_olivo'(nombreDestino='Parque el Olivar', precio=200)}">Agregar al carrito</a></button>
                 <button class="More-info">Más información</button>
             </div>
         </div>

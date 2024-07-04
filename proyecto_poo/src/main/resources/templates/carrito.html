@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+</head>
+<body>
+    <h1>Carrito de <span th:text="${carrito.usuarioNombre}"></span></h1>
+    <h2>Id: <span th:text="${carrito.id}"></span></h2>
+    <h2>Destinos:</h2>
+    <ul>
+        <th:block th:each="destino : ${carrito.listaDestinos}">
+            <li>
+                <span th:text="${destino.nombre}">Nombre del Destino</span>
+                <span th:text="${destino.precio}">Nombre del Destino</span>
+                <!-- Agrega más campos según los atributos de Destino -->
+            </li>
+        </th:block>
+    </ul>
+</body>
+</html>
