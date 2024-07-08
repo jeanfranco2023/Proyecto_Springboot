@@ -26,14 +26,14 @@
                 <i class="fa-solid fa-bell"></i>
             </span>
             <div>
-                <a class="usuario">&nbsp;&nbsp;¡Hola! Jean Franco&nbsp;</a>
+                <a class="usuario">&nbsp;&nbsp;¡Hola! <span th:text="${nombreUsuario}">&nbsp;</a>
                 </div>
             <div class="user-menu">
                 <button class="user">
                     <i class="fa-solid fa-user"></i>
                 </button>
                 <div class="dropdown-menu">
-                    <a href="#">Verificar compras</a>
+                    <a href="/verCarrito">Verificar compras</a>
                     <a href="#">Usuario</a>
                     <a href="/principalUsuarios">Cerrar sesión</a>
                 </div>
