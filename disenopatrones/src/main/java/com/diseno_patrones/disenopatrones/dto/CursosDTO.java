@@ -6,7 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.diseno_patrones.disenopatrones.Entity.cursos;
+import com.diseno_patrones.disenopatrones.entity.cursos;
 import com.diseno_patrones.disenopatrones.interfaceService.CRUDcursos;
 import com.diseno_patrones.disenopatrones.repository.CursosRepository;
 

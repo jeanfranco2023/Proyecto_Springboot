@@ -1,10 +1,12 @@
 package com.diseno_patrones.disenopatrones.repository;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import com.diseno_patrones.disenopatrones.Entity.cursos;
+import com.diseno_patrones.disenopatrones.entity.cursos;
 
-    public interface CursosRepository extends CrudRepository<cursos, Integer> {
+    @Repository
+    public interface CursosRepository extends JpaRepository<cursos, Integer> {
 
 
 

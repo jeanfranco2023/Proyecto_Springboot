@@ -3,8 +3,7 @@ package com.diseno_patrones.disenopatrones.interfaceService;
 import java.util.List;
 import java.util.Optional;
 
-
-import com.diseno_patrones.disenopatrones.Entity.cursos;
+import com.diseno_patrones.disenopatrones.entity.cursos;
 
 public interface CRUDcursos {
     public List<cursos> listar();
